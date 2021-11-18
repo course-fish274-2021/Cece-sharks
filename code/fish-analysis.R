@@ -9,13 +9,13 @@ library(ggplot2)
 
 
 # Adding column to denote if fish is big or small, using 300 as a cutoff (command: mutate)
-# Removed any fish with a scalelength less than 1mm from data (command: filter)
+# Removed any fish with a scale length less than 1mm from data (command: filter)
 fish_data_cat <- fish_data %>%
   filter(scalelength > 1) %>%
   mutate(length_cat = ifelse(length > 300, "big", "small"))
 
-# PULL 
-#plot code
+
+# Plot code - from GitHub pull 
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram(bins=80)
 
