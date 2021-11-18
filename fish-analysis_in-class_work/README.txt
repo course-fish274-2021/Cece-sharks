@@ -1,0 +1,2 @@
+The work in this folder: "fish-analysis_in-class_work" is all the work we did in class in week 8, as we were learning tools we needed to start our projects. In week 8, we practiced using Git. We learned to commit so that we could save our work, push that work to GitHub, and also how to pull script back from GitHub into R. 
+My scripts folder has the code work we did in class, my data folder has the Gaeta data we saved, and plot_images has the image of a plot we made saved. 

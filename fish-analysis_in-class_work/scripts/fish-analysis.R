@@ -3,7 +3,7 @@
 
 
 # Loading in the data & needed packages
-fish_data <- read.csv("data/Gaeta_etal_CLC_data_1.csv")
+fish_data <- read.csv("fish-analysis_in-class_work/data/Gaeta_etal_CLC_data_1.csv")
 library(dplyr)
 library(ggplot2)
 
