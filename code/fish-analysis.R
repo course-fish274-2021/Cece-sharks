@@ -19,3 +19,8 @@ fish_data_cat <- fish_data %>%
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram(bins=80)
 
+
+# Save plot as a picture
+ggsave("scale_hist_by_length.jpg")
+
+
