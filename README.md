@@ -1,5 +1,7 @@
 # Cece-sharks
 
+The script for this project can be found in the "scripts" folder within the "AustralianSharkIncidentData-main" folder. 
+
 My project is based on Australian Shark Incident Data from Corey Bradshaw on GitHub. 
 The data gives us an outline of more than 1000 shark attacks from 1791 to the present. 
 It includes variables such as if the attack was provoked or unprovoked, if the person who was attacked was injured or uninjured, and what kind of shark (from either white shark, bull shark, tiger shark, or other) committed the attack. 
