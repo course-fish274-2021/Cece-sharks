@@ -10,5 +10,5 @@ Bradshaw, Corey. @cjabradshaw. "Australian Shark Incident Database"
   September 19th, 2021 - Present. 
   
 With this data, I will be addressing a few questions, as follows:
-1. Is there a correlation between if an attack is provoked and if the person was injured?
+1. Is there a correlation between if an attack is provoked and if the person was killed?
 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?

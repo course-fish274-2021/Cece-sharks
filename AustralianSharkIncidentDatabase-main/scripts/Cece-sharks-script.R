@@ -31,9 +31,9 @@ library(tibble)
 library(ozmaps)
 library(ggpubr)
 
-
-
-
+# Adding in data
+top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv")
+top_3 <- read.csv("AustralianSharkIncidentDatabase-main/data/top.3.csv")
 
 
 
