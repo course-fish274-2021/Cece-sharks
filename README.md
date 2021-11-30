@@ -14,3 +14,10 @@ Bradshaw, Corey. @cjabradshaw. "Australian Shark Incident Database"
 With this data, I will be addressing a few questions, as follows:
 1. Is there a correlation between if an attack is provoked and if the person was killed?
 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
+
+-----------------------------------------------------------------------------
+PROJECT PLAN:
+11/30/21 - Work in class on project, learn RMarkdown, and create first Rmd file 
+12/1/21 - Work at home on project, have at least 1 graph finished / 1 question answered. Add an issue to a classmate on GitHub. 
+12/2/21 - Work in class on project, ask questions if needed. Add an issue to my repository on GitHub. Create draft Rmd Slidedeck. 
+12/3/21 - Turn in Week 10 quiz, make sure that everything is completed 
