@@ -16,6 +16,7 @@
 # install.packages("tibble")
 # install.packages("ozmaps")
 # install.packages("ggpubr")
+install.packages("rmarkdown")
 
 library(ggplot2)
 library(dplyr)
