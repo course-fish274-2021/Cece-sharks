@@ -37,6 +37,9 @@ top_3 <- read.csv("AustralianSharkIncidentDatabase-main/data/top.3.csv")
 
 # Answering the questions 
 # 1. Is there a correlation between if an attack is provoked and if the person was killed?
+
+
+
 ggplot(data = top_sharks, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
   geom_point() +
   labs(x= "Provoked or Unprovoked", y= "Human Recovery Status") +
@@ -45,6 +48,7 @@ ggplot(data = top_sharks, mapping = aes(x = Provoked.unprovoked, y = Recovery.st
 
 
 # 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
+# need shark & prov/unprov dataset 
 
 
 
