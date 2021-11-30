@@ -1,16 +1,15 @@
 ---
-title: "Cece-sharks-markdown"
+title: "Cece-sharks"
 output: html_document
 ---
 ## Project Concept
 
-In this project, I will be exploring data outlining shark attacks in Australia from 1791 until the present day. 
+In this project, I will be exploring data outlining shark attacks in Australia from 1791 until the present day. I want to know if there is a correlation between fatal and provoked attacks, and what types of sharks are most likely to participate in provoked vs unprovoked attacks. 
 
 ```{r, echo=FALSE}
 #Loading in packages and csv files
 library(dplyr)
 library(ggplot2)
-
 top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv")
 ```
 
