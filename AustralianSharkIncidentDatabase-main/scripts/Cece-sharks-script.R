@@ -16,7 +16,7 @@
 # install.packages("tibble")
 # install.packages("ozmaps")
 # install.packages("ggpubr")
-install.packages("rmarkdown")
+#install.packages("rmarkdown")
 
 library(ggplot2)
 library(dplyr)
@@ -31,10 +31,10 @@ library(magrittr)
 library(tibble)
 library(ozmaps)
 library(ggpubr)
+library(rmarkdown)
 
 # Adding in data
 top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv")
-top_3 <- read.csv("AustralianSharkIncidentDatabase-main/data/top.3.csv")
 
 # Answering the questions 
 # 1. Is there a correlation between if an attack is provoked and if the person was killed?
