@@ -10,7 +10,7 @@ In this project, I will be exploring data outlining shark attacks in Australia f
 #Loading in packages and csv files
 library(dplyr)
 library(ggplot2)
-top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv")
+top_sharks <- read.csv("../data/top.sharks.csv")
 ```
 
 
