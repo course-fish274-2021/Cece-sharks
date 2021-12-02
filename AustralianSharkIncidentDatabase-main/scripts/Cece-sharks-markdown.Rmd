@@ -11,16 +11,13 @@ In this project, I will be exploring data outlining shark attacks in Australia f
 library(dplyr)
 library(ggplot2)
 top_sharks <- read.csv("../data/top.sharks.csv")
+fatality_data <- select(top_sharks, Recovery.status, Provoked.unprovoked)
 ```
 
 
 
 ## Data: Is there a correlation between provoked and fatal attacks? 
 ```{r}
-fatality_data <- select(top_sharks, Recovery.status, Provoked.unprovoked) %>%
-  filter(fatality_data, Recovery.status == "fatal") %>%
-  filter(fatality_data, Provoked.unprovoked == "Provoked")
-
 ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
   geom_point() +
   labs(x= "Provoked or Unprovoked", y= "Human Recovery Status") +
