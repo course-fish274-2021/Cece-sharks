@@ -54,6 +54,9 @@ fatal_join <- inner_join(fatal_unprovoked, fatal_provoked, by = "Recovery.status
 pvu <- top_sharks %>%
   group_by(Provoked.unprovoked, Recovery.status) %>%
   summarize(n = n())
+
+
+
 # i need to join the two by provoked.unprovoked
 
 
