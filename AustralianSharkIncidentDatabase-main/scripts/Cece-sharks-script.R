@@ -20,18 +20,18 @@
 
 library(ggplot2)
 library(dplyr)
-library(forcats)
-library(leaflet)
-library(viridis)
-library(scales)
-library(ggmap)
-library(gridExtra)
-library(rgdal)
-library(magrittr)
-library(tibble)
-library(ozmaps)
-library(ggpubr)
-library(rmarkdown)
+# library(forcats)
+# library(leaflet)
+# library(viridis)
+# library(scales)
+# library(ggmap)
+# library(gridExtra)
+# library(rgdal)
+# library(magrittr)
+# library(tibble)
+# library(ozmaps)
+# library(ggpubr)
+# library(rmarkdown)
 
 # Adding in data
 top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv")
@@ -42,13 +42,23 @@ top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv
 fatality_data <- select(top_sharks, Recovery.status == "fatal", Provoked.unprovoked)
 fatal_provoked <- filter(fatality_data, Recovery.status == "fatal", Provoked.unprovoked == "Provoked")
 fatal_unprovoked <- filter(fatality_data, Recovery.status == "fatal", Provoked.unprovoked == "Unprovoked")
+fatal_join <- inner_join(fatal_unprovoked, fatal_provoked, by = "Recovery.status")
 # i need to join the two by provoked.unprovoked
 
-ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
-  geom_point() +
-  labs(x= "Provoked or Unprovoked", y= "Human Recovery Status") +
-  facet_wrap(~Provoked.unprovoked)
-#what i wanna do is count how many people had fatal attacks, injured attacks, and uninjured attacks, and plot those against if the attack was provoked or unprovoked. 
+
+ggplot(mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
+  geom_bar(data = fatal_provoked) +
+  geom_bar(data = fatal_unprovoked) +
+  labs(x= "Provoked or Unprovoked", y= "Human Recovery Status") 
+
+
+#, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)
+#ggplot()+
+# geom_histogram (data = bird_join, mapping = aes(x=M_mass), fill = "black", alpha = 0.3, na.rm=TRUE, bins=30)+
+#   geom_histogram (data = bird_join, mapping = aes(x=F_mass), fill = "blue", alpha = 0.3, na.rm=TRUE, bins=30)+
+#   labs (x = "Mass (g)") +
+#   scale_x_log10()+
+#   facet_wrap(~Family)
 
 
 # 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?

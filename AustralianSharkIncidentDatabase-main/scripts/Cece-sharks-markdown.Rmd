@@ -11,7 +11,7 @@ In this project, I will be exploring data outlining shark attacks in Australia f
 library(dplyr)
 library(ggplot2)
 top_sharks <- read.csv("../data/top.sharks.csv")
-atality_data <- select(top_sharks, Recovery.status == "fatal", Provoked.unprovoked)
+fatality_data <- select(top_sharks, Recovery.status == "fatal", Provoked.unprovoked)
 fatal_provoked <- filter(fatality_data, Recovery.status == "fatal", Provoked.unprovoked == "Provoked")
 fatal_unprovoked <- filter(fatality_data, Recovery.status == "fatal", Provoked.unprovoked == "Unprovoked")
 ```
