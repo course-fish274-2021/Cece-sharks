@@ -39,31 +39,12 @@ top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv
 # Answering the questions 
 # 1. Is there a correlation between if an attack is provoked and if the person was killed?
 
-fatality_data <- select(top_sharks, Recovery.status, Provoked.unprovoked)
+filtered_data_sharks <- select(top_sharks, Recovery.status, Provoked.unprovoked)
+fatality_data <- filter(filtered_data_sharks, Recovery.status == "fatal", Provoked.unprovoked == c("Provoked", "Unprovoked"))
 
-
-fatal_provoked <- filter(fatality_data, Recovery.status == "fatal", Provoked.unprovoked == "Provoked")
-fatal_unprovoked <- filter(fatality_data, Recovery.status == "fatal", Provoked.unprovoked == "Unprovoked")
-
-fatal_join <- inner_join(fatal_unprovoked, fatal_provoked, by = "Recovery.status")
-
-# using group by
-
-
-
-pvu <- top_sharks %>%
-  group_by(Provoked.unprovoked, Recovery.status) %>%
-  summarize(n = n())
-
-
-
-# i need to join the two by provoked.unprovoked
-
-
-ggplot(mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
-  geom_bar(data = fatal_provoked) +
-  geom_bar(data = fatal_unprovoked) +
-  labs(x= "Provoked or Unprovoked", y= "Human Recovery Status") 
+ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
+  geom_bar(stat="identity", color="blue") +
+  labs(x= "Provoked or Unprovoked Attack", y= "Human Recovery Status: Fatal")
 
 
 #, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)
