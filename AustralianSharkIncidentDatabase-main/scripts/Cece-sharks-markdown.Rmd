@@ -12,8 +12,11 @@ library(dplyr)
 library(ggplot2)
 top_sharks <- read.csv("../data/top.sharks.csv")
 filtered_data_sharks <- select(top_sharks, Recovery.status, Provoked.unprovoked)
-fatality_data <- filter(filtered_data_sharks, Recovery.status == "fatal", Provoked.unprovoked == c("Provoked", "Unprovoked"))
-filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoked)
+fatality_data <- filter(filtered_data_sharks, Recovery.status == "fatal", Provoked.unprovoked == c("Provoked", "Unprovoked"), na.rm=TRUE)
+filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoked) %>%
+  filter(Provoked.unprovoked == "Provoked" | Provoked.unprovoked == "Unprovoked")
+
+#filter for only provoked/unprovoked 
 ```
 
 
@@ -25,9 +28,9 @@ ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery
 ```
 
 ## Data: What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
-```{r}
+```{r, echo=FALSE}
 ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Shark.common.name)) +
-  geom_bar(stat="identity", color="red", na.omit=TRUE) +
+  geom_bar(stat="identity", color="red", na.rm=TRUE) +
   labs(x="Provoked or Unprovoked Attack", y = "Shark Type") +
   facet_wrap(~Shark.common.name)
 ```
