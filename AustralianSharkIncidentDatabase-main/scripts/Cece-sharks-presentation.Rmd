@@ -37,7 +37,7 @@ ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery
 
 ## Question 2: What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
 
-```{r}
+```{r, echo = FALSE}
 ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Shark.common.name)) +
   geom_bar(stat="identity", color="aquamarine3", na.rm=TRUE) +
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
