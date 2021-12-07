@@ -31,3 +31,10 @@ summary(cars)
 plot(pressure)
 ```
 
+## Citation 
+Bradshaw, Corey. @cjabradshaw. "Australian Shark Incident Database"
+  https://github.com/cjabradshaw/AustralianSharkIncidentDatabase
+  September 19th, 2021 - Present. 
+![](https://github.com/cjabradshaw/AustralianSharkIncidentDatabase/blob/main/www/ASIDlogo3.png?raw=true){width=50%}
+
+
