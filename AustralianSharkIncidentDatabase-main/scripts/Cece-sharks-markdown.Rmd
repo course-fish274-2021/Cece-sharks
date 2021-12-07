@@ -6,7 +6,7 @@ output: html_document
 
 In this project, I will be exploring data outlining shark attacks in Australia from 1791 until the present day. I want to know if there is a correlation between fatal and provoked attacks, and what types of sharks are most likely to participate in provoked vs unprovoked attacks. 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message = FALSE, error = FALSE, warning=FALSE}
 #Loading in packages and csv files
 library(dplyr)
 library(ggplot2)
@@ -19,7 +19,7 @@ filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoke
 
 
 ## Question 1: Is there a correlation between provoked and fatal attacks? 
-```{r, echo=FALSE}
+```{r, echo=FALSE}  
 ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
   geom_bar(stat="identity", color="darkseagreen2") +
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
