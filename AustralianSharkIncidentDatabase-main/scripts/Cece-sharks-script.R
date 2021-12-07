@@ -43,7 +43,8 @@ filtered_data_recovery <- select(top_sharks, Recovery.status, Provoked.unprovoke
 fatality_data <- filter(filtered_data_recovery, Recovery.status == "fatal", Provoked.unprovoked == c("Provoked", "Unprovoked"))
 
 ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
-  geom_bar(stat="identity", color="blue") +
+  geom_bar(stat="identity", color="darkseagreen2") +
+  theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
   labs(x= "Provoked or Unprovoked Attack", y= "Human Recovery Status: Fatal")
 
   # 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
@@ -52,7 +53,7 @@ filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoke
   filter(Provoked.unprovoked == "Provoked" | Provoked.unprovoked == "Unprovoked")
 
 ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Shark.common.name)) +
-  geom_bar(stat="identity", color="red", na.rm=TRUE) +
+  geom_bar(stat="identity", color="aquamarine3", na.rm=TRUE) +
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
   labs(x="Provoked or Unprovoked Attack", y = "Shark Type") +
   facet_wrap(~Shark.common.name)
