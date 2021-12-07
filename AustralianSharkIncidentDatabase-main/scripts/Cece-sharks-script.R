@@ -37,7 +37,7 @@ library(dplyr)
 top_sharks <- read.csv("AustralianSharkIncidentDatabase-main/data/top.sharks.csv")
 
 # Answering the questions 
-# 1. Is there a correlation between if an attack is provoked and if the person was killed?
+  # 1. Is there a correlation between if an attack is provoked and if the person was killed?
 
 filtered_data_recovery <- select(top_sharks, Recovery.status, Provoked.unprovoked)
 fatality_data <- filter(filtered_data_recovery, Recovery.status == "fatal", Provoked.unprovoked == c("Provoked", "Unprovoked"))
@@ -46,13 +46,12 @@ ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery
   geom_bar(stat="identity", color="blue") +
   labs(x= "Provoked or Unprovoked Attack", y= "Human Recovery Status: Fatal")
 
-# 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
-# need shark & prov/unprov dataset 
+  # 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
 
 filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoked)
 
 ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Shark.common.name)) +
-  geom_bar(stat="identity", color="red", na.omit=FALSE) +
+  geom_bar(stat="identity", color="red", na.omit=TRUE) +
   labs(x="Provoked or Unprovoked Attack", y = "Shark Type") +
   facet_wrap(~Shark.common.name)
 
