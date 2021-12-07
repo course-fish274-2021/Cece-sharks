@@ -15,8 +15,6 @@ filtered_data_sharks <- select(top_sharks, Recovery.status, Provoked.unprovoked)
 fatality_data <- filter(filtered_data_sharks, Recovery.status == "fatal", Provoked.unprovoked == c("Provoked", "Unprovoked"), na.rm=TRUE)
 filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoked) %>%
   filter(Provoked.unprovoked == "Provoked" | Provoked.unprovoked == "Unprovoked")
-
-#filter for only provoked/unprovoked 
 ```
 
 

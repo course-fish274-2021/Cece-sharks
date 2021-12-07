@@ -52,7 +52,7 @@ filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoke
   filter(Provoked.unprovoked == "Provoked" | Provoked.unprovoked == "Unprovoked")
 
 ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Shark.common.name)) +
-  geom_bar(stat="identity", color="red", na.omit=TRUE) +
+  geom_bar(stat="identity", color="red", na.rm=TRUE) +
   labs(x="Provoked or Unprovoked Attack", y = "Shark Type") +
   facet_wrap(~Shark.common.name)
 
