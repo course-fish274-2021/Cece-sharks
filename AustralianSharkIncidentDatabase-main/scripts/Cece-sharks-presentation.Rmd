@@ -1,5 +1,6 @@
 ---
-title: "Cece-sharks-presentation"
+title: "Australian Shark Attack Data Presentation"
+author: "Cece Wendel" 
 output: ioslides_presentation
 ---
 
@@ -24,18 +25,36 @@ In this project, I will be exploring data outlining shark attacks in Australia f
 1. Is there a correlation between if an attack is provoked and if the person was killed?
 2. What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
 
-![Tiger Shark](https://e3.365dm.com/17/12/1600x900/skynews-tiger-shark-generic_4172004.jpg?20171202103900){width=50%}
+<center>
 
-## Question 1: Is there a correlation between provoked and fatal attacks?
+![Tiger Shark. Credit: skynews-tiger-shark-generic_4172004.jpg](https://e3.365dm.com/17/12/1600x900/skynews-tiger-shark-generic_4172004.jpg?20171202103900){width=50%}
+
+</center>
+
+## Question 1 Graph: Is there a correlation between provoked and fatal attacks?
 
 ```{r, echo = FALSE}
 ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
-  geom_bar(stat="identity", color="darkseagreen2") +
+  geom_bar(stat="identity", color="plum1") +
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
   labs(x= "Provoked or Unprovoked Attack", y= "Human Recovery Status: Fatal")
 ```
 
-## Question 2: What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
+## Question 1 Conclusion: Is there a correlation between provoked and fatal attacks? 
+
+*Conclusion:* 
+
+- More fatal unprovoked attacks, why? 
+- Australian data
+- Sharks may mistake people on surfboards for seals 
+
+<center>
+
+![Human vs Seal. Credit: https://www.dailymail.co.uk/](https://i.dailymail.co.uk/i/pix/2015/04/09/13/2765A15200000578-3031958-image-a-22_1428581222432.jpg){width=40%}
+
+</center>
+
+## Question 2 Graph: What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
 
 ```{r, echo = FALSE}
 ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Shark.common.name)) +
@@ -45,10 +64,28 @@ ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Sha
   facet_wrap(~Shark.common.name)
 ```
 
+## Question 2 Conclusion: What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
+
+*Conclusion:* 
+
+- Great White sharks most likely to attack unprovoked
+- Could be related to seal diet 
+- Bull sharks known as aggressive, but eat smaller prey 
+
+<center>
+
+![Great White Shark. Credit: https://theconversation.com/](https://images.theconversation.com/files/43861/original/6gqj734n-1394723838.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip){width=25%}
+
+</center>
+
 
 ## Citation 
 Bradshaw, Corey. @cjabradshaw. "Australian Shark Incident Database"
   https://github.com/cjabradshaw/AustralianSharkIncidentDatabase
   September 19th, 2021 - Present. 
+<center>
+
 ![](https://github.com/cjabradshaw/AustralianSharkIncidentDatabase/blob/main/www/ASIDlogo3.png?raw=true){width=50%}
+
+</center>
 
