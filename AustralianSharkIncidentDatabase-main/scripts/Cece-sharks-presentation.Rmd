@@ -43,6 +43,7 @@ ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery
 ## Question 1 Conclusion: Is there a correlation between provoked and fatal attacks? 
 
 *Conclusion:* 
+
 - More fatal unprovoked attacks, why? 
 - Australian data
 - Sharks may mistake people on surfboards for seals 
@@ -66,13 +67,14 @@ ggplot(data=filtered_data_sharks, mapping = aes(x = Provoked.unprovoked, y = Sha
 ## Question 2 Conclusion: What kind of shark is most likely to participate in a provoked vs an unprovoked attack?
 
 *Conclusion:* 
+
 - Great White sharks most likely to attack unprovoked
 - Could be related to seal diet 
 - Bull sharks known as aggressive, but eat smaller prey 
 
 <center>
 
-![Great White Shark. Credit: https://theconversation.com/](https://images.theconversation.com/files/43861/original/6gqj734n-1394723838.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip)
+![Great White Shark. Credit: https://theconversation.com/](https://images.theconversation.com/files/43861/original/6gqj734n-1394723838.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip){width=25%}
 
 </center>
 
