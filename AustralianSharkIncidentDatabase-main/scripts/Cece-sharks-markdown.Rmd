@@ -21,7 +21,7 @@ filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoke
 ## Question 1: Is there a correlation between provoked and fatal attacks? 
 ```{r, echo=FALSE}  
 ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
-  geom_bar(stat="identity", color="darkseagreen2") +
+  geom_bar(stat="identity", color="plum1") +
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
   labs(x= "Provoked or Unprovoked Attack", y= "Human Recovery Status: Fatal")
 ```
