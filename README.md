@@ -23,3 +23,5 @@ PROJECT PLAN:
 - 12/1/21 - Work at home on project, have at least 1 graph finished / 1 question answered. Add an issue to a classmate on GitHub. 
 - 12/2/21 - Work in class on project, ask questions if needed. Add an issue to my repository on GitHub. Create draft Rmd Slidedeck. 
 - 12/3/21 - Turn in Week 10 quiz, make sure that everything is completed 
+- 12/4/21 - 12/8/21 - Continue to work on and clean up presentation 
+- 12/9/21 - Presentation day 
