@@ -35,7 +35,7 @@ In this project, I will be exploring data outlining shark attacks in Australia f
 
 ```{r, echo = FALSE}
 ggplot(data = fatality_data, mapping = aes(x = Provoked.unprovoked, y = Recovery.status)) +
-  geom_bar(stat="identity", color="darkseagreen2") +
+  geom_bar(stat="identity", color="plum1") +
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank())+
   labs(x= "Provoked or Unprovoked Attack", y= "Human Recovery Status: Fatal")
 ```
