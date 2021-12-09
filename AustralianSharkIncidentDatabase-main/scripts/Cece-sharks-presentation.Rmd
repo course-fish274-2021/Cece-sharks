@@ -16,7 +16,7 @@ filtered_data_sharks <- select(top_sharks, Shark.common.name, Provoked.unprovoke
   filter(Provoked.unprovoked == "Provoked" | Provoked.unprovoked == "Unprovoked")
 ```
 
-## Project Concept: Australian Shark Attack Data. 
+## Project Concept: Australian Shark Attack Data
 
 In this project, I will be exploring data outlining shark attacks in Australia from 1791 until the present day. I want to know if there is a correlation between fatal and provoked attacks, and what types of sharks are most likely to participate in provoked vs unprovoked attacks. 
 
