@@ -6,7 +6,7 @@ The data gives us an outline of more than 1100 shark attacks from 1791 to the pr
 It includes variables such as if the attack was provoked or unprovoked, if the person who was attacked was injured or uninjured, and what kind of shark (from either white shark, bull shark, tiger shark, or other) committed the attack. 
 
 DIRECTORY STRUCTURE: 
-All of the scripts, data, etc, can be found in the "AustralianSharkIncidentData-main" folder in labeled folders. The script & RMarkdown file for this project can be found in the "scripts" folder within the "AustralianSharkIncidentData-main" folder. 
+All of the scripts, data, etc, can be found in the "AustralianSharkIncidentData-main" folder in labeled folders. The script, RMarkdown file, and RMarkdown presentation for this project can be found in the "scripts" folder within the "AustralianSharkIncidentData-main" folder. 
 
 CITATION:
 Bradshaw, Corey. @cjabradshaw. "Australian Shark Incident Database"
